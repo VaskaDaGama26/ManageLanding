@@ -1,0 +1,33 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+@theme {
+  --buttonShadow: 0 8px 16px rgba(242, 95, 58, 0.7);
+  --wMobileMenu: calc(100dvw - 2.25rem);
+  --left45: calc(var(--spacing) * 4.5);
+}
+
+:root {
+  /* Primary */
+  --BrightRed: hsl(12, 88%, 59%);
+  --DarkBlue: hsl(228, 39%, 23%);
+
+  /* Neutral */
+  --DarkGrayishBlue: hsl(227, 12%, 61%);
+  --VeryDarkBlue: hsl(233, 12%, 13%);
+  --VeryPaleRed: hsl(13, 100%, 96%);
+  --VeryLightGray: hsl(0, 0%, 98%);
+}
+
+html {
+  width: 100%;
+  height: auto;
+}
+
+.wrapper {
+  margin: 0 auto;
+  background-image: url("/images/bg-simplify-section-desktop.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
