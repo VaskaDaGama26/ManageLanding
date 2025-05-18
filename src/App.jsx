@@ -1,11 +1,19 @@
-import { Route, BrowserRouter as Router } from "react-router-dom";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
+import Header from "./components/Header";
 import MainPage from "./components/MainPage";
+import Footer from "./components/Footer";
 
 function App() {
   return (
-    <Router>
-      <Route path="/" element={<MainPage />} />
-    </Router>
+    <div className="wrapper px-2.5 py-8">
+      <Router>
+        <Header />
+        <Routes>
+          <Route path="/" element={<MainPage />} />
+        </Routes>
+        <Footer />
+      </Router>
+    </div>
   );
 }
 

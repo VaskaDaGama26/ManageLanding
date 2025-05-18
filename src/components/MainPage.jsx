@@ -1,11 +1,14 @@
-import React from "react";
-import Header from "./Header";
+import Charts from "./Charts";
+import About from "./About";
+import Reviews from "./Reviews";
 
 const MainPage = () => {
   return (
-    <div className="wrapper px-2.5 py-8">
-      <Header />
-    </div>
+    <>
+      <Charts />
+      <About />
+      <Reviews />
+    </>
   );
 };
 

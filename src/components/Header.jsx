@@ -3,12 +3,12 @@ import logo from "/images/logo.svg";
 import { useNavigate } from "react-router-dom";
 import burger from "/icons/burger.svg";
 import close from "/icons/close.svg";
-import Nav from "../UI/Nav";
+import Nav from "../UI/NavItem";
 
 const Header = () => {
   const navigate = useNavigate();
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  
+  const [isMobileMenu, setIsMobileMenu] = useState(false);
+
   const navItems = [
     {
       id: 1,
@@ -47,7 +47,7 @@ const Header = () => {
 
     const handleResize = () => {
       if (mediaQuery.matches) {
-        setIsMobileMenuOpen(false);
+        setIsMobileMenu(false);
       }
     };
 
@@ -65,14 +65,14 @@ const Header = () => {
       <a className="w-[120px] lg:w-auto" href="/">
         <img src={logo} alt="Manage Logo" />
       </a>
-      {isMobileMenuOpen && (
+      {isMobileMenu && (
         <div className="lg:hidden fixed inset-0 bg-(--VeryDarkBlue) opacity-25 z-10"></div>
       )}
       {/* NAV */}
       <nav>
         <ul
           className={`${
-            !isMobileMenuOpen
+            !isMobileMenu
               ? "hidden text-base lg:flex flex-row gap-8 be-vietnam-pro-regular"
               : "z-30 text-sm bg-white lg:hidden absolute w-(--wMobileMenu) left-(--left45) mt-12 py-8 flex flex-col items-center justify-center gap-6 be-vietnam-pro-medium"
           }`}
@@ -90,12 +90,11 @@ const Header = () => {
 
       {/* Mobile Burger Icon */}
       <button
-        className="z-20 lg:hidden"
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        className="z-20 cursor-pointer lg:hidden"
+        onClick={() => setIsMobileMenu(!isMobileMenu)}
       >
         <img
-          className="duration-300"
-          src={isMobileMenuOpen ? close : burger}
+          src={isMobileMenu ? close : burger}
           alt="Menu"
         />
       </button>
