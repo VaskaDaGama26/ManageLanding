@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import logo from "/images/logo.svg";
-import { useNavigate } from "react-router-dom";
 import burger from "/icons/burger.svg";
 import close from "/icons/close.svg";
 import Nav from "../UI/NavItem";
+import StartedButton from "../UI/StartedButton";
+import { handleStart } from "../utils/handleStart";
 
 const Header = () => {
-  const navigate = useNavigate();
   const [isMobileMenu, setIsMobileMenu] = useState(false);
 
   const navItems = [
@@ -37,11 +37,6 @@ const Header = () => {
     },
   ];
 
-  const startedButton = (e) => {
-    e.preventDefault();
-    navigate("/");
-  };
-
   useEffect(() => {
     const mediaQuery = window.matchMedia("(min-width: 1280px)");
 
@@ -60,7 +55,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="flex flex-row justify-between items-center max-w-7xl px-2 lg:px-16 mx-auto">
+    <div className="flex flex-row justify-between items-center max-w-7xl mx-auto px-2">
       {/* LOGO */}
       <a className="w-[120px] lg:w-auto" href="/">
         <img src={logo} alt="Manage Logo" />
@@ -81,22 +76,18 @@ const Header = () => {
         </ul>
       </nav>
       {/* BUTTON */}
-      <button
-        onClick={startedButton}
-        className="hidden lg:block cursor-pointer text-base be-vietnam-pro-medium rounded-full px-8 py-3 text-white bg-(--BrightRed) duration-300 hover:opacity-70 hover:shadow-(--buttonShadow)"
-      >
-        Get Started
-      </button>
+      <StartedButton
+        action={handleStart}
+        scheme="primary"
+        classes="hidden lg:block"
+      />
 
       {/* Mobile Burger Icon */}
       <button
         className="z-20 cursor-pointer lg:hidden"
         onClick={() => setIsMobileMenu(!isMobileMenu)}
       >
-        <img
-          src={isMobileMenu ? close : burger}
-          alt="Menu"
-        />
+        <img src={isMobileMenu ? close : burger} alt="Menu" />
       </button>
     </div>
   );
