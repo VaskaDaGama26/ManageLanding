@@ -55,7 +55,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="flex flex-row justify-between items-center max-w-7xl mx-auto px-2">
+    <div className="flex flex-row justify-between items-center max-w-7xl mx-auto px-4.5">
       {/* LOGO */}
       <a className="w-[120px] lg:w-auto" href="/">
         <img src={logo} alt="Manage Logo" />

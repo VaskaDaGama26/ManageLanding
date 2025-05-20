@@ -31,3 +31,16 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* LIST INCREMENT */
+.about ul {
+  counter-reset: item;
+}
+
+.about li {
+  counter-increment: item;
+}
+
+.about li::before {
+  content: counter(item, decimal-leading-zero);
+}

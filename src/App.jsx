@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="wrapper px-2.5 py-8">
+    <div className="wrapper py-8">
       <Router>
         <Header />
         <Routes>
