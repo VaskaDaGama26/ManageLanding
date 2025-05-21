@@ -1,5 +1,6 @@
 import React from "react";
 import ListItem from "../UI/ListItem";
+import Heading from "../UI/Heading";
 
 const About = () => {
   const listItems = [
@@ -21,17 +22,15 @@ const About = () => {
   ];
   return (
     <div className="about flex flex-col gap-12 lg:gap-0 lg:flex-row justify-between items-center lg:items-start max-w-7xl mx-auto mt-24 lg:mt-24">
-      <div className="flex px-2 lg:ps-2 lg:pe-16 flex-col gap-2 lg:gap-6 max-w-[400px] lg:max-w-[500px] items-center lg:items-start text-center lg:text-start">
-        <h1 className="be-vietnam-pro-bold text-[34px] lg:text-[40px] leading-10 lg:leading-12 text-(--DarkBlue)">
-          What’s different about Manage?
-        </h1>
-        <h3 className="be-vietnam-pro-regular text-sm leading-8 lg:text-base text-(--DarkGrayishBlue) max-w-[280px] lg:max-w-[340px]">
+      <div className="flex px-2 lg:ps-2 lg:pe-16 flex-col gap-2 lg:gap-6 max-w-none lg:max-w-[500px] items-center lg:items-start text-center lg:text-start">
+        <Heading label="What’s different about Manage?" />
+        <h3 className="be-vietnam-pro-regular text-sm leading-8 lg:text-base text-(--DarkGrayishBlue) max-w-[400px] lg:max-w-[340px]">
           Manage provides all the functionality your team needs, without the
           complexity. Our software is tailor-made for modern digital product
           teams.
         </h3>
       </div>
-      <div className="max-w-[600px]">
+      <div className="w-full lg:max-w-[600px]">
         <ul className="flex justify-start flex-col gap-10">
           {listItems.map((item, index) => (
             <ListItem key={index} label={item.label} text={item.text} />

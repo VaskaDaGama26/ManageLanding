@@ -6,11 +6,11 @@ const Charts = () => {
 
   return (
     <div className="flex px-2.5 flex-col-reverse lg:flex-row justify-between items-center max-w-7xl mx-auto mt-6 lg:mt-24">
-      <div className="flex flex-col gap-2 lg:gap-10 max-w-[400px] lg:max-w-[600px] items-center lg:items-start text-center lg:text-start">
+      <div className="flex flex-col gap-2 lg:gap-10 max-w-[600px] items-center lg:items-start text-center lg:text-start">
         <h1 className="be-vietnam-pro-bold text-[34px] lg:text-[52px] leading-10 lg:leading-16 text-(--DarkBlue)">
           Bring everyone together to build better products.
         </h1>
-        <h3 className="be-vietnam-pro-regular text-sm leading-8 lg:text-base text-(--DarkGrayishBlue) max-w-[260px] lg:max-w-[340px]">
+        <h3 className="be-vietnam-pro-regular text-sm leading-8 lg:text-base text-(--DarkGrayishBlue) max-w-[400px] lg:max-w-[340px]">
           Manage makes it simple for software teams to plan day-to-day tasks
           while keeping the larger team goals in view.
         </h3>

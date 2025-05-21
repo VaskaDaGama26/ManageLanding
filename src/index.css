@@ -44,3 +44,14 @@ html {
 .about li::before {
   content: counter(item, decimal-leading-zero);
 }
+
+/* REVIEW CAROUSEL */
+.review__carousel {
+  @apply w-full overflow-x-auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: visible;
+}
+.review__carousel::-webkit-scrollbar {
+  display: none;
+}
