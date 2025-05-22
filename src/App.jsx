@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 function App() {
   return (
     <main className="pt-8">
-      <Router>
+      <Router basename="/ManageLanding/">
         <Header />
         <Routes>
           <Route path="/" element={<MainPage />} />
