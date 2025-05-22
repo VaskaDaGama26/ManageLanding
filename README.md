@@ -1,6 +1,6 @@
 # Frontend Mentor - Manage landing page solution
 
-This is a solution to the [Manage landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5). Frontend Mentor challenges help you improve your coding skills by building realistic projects. 
+This is a solution to the [Manage landing page challenge on Frontend Mentor](https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5). Frontend Mentor challenges help you improve your coding skills by building realistic projects.
 
 ## Table of contents
 
@@ -27,12 +27,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](./screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [https://vaskadagama26.github.io/ManageLanding](https://vaskadagama26.github.io/ManageLanding)
 
 ## My process
 
@@ -40,7 +39,11 @@ Users should be able to:
 
 - Semantic HTML5 markup
 - [React](https://reactjs.org/) - JS library
+- [Vite](https://vite.dev/) - Build Tool
+- [Tailwind](https://tailwindcss.com/) - CSS Framework
+- [SVGR](https://github.com/pd4d10/vite-plugin-svgr) - Vite plugin to transform SVGs into React components
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- TG - [Vasiliy Kirichenko](https://t.me/vaskadagamaa26)
+- Frontend Mentor - [VaskaDaGama26](https://www.frontendmentor.io/profile/VaskaDaGama26)

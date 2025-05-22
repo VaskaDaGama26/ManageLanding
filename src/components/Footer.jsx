@@ -10,6 +10,7 @@ import PinterestIcon from "../iconsSocial/icon-pinterest.svg?react";
 import InstagramIcon from "../iconsSocial/icon-instagram.svg?react";
 
 const Footer = () => {
+  const currentYear = new Date().getFullYear()
   const [email, setEmail] = useState("");
   const [touched, setTouched] = useState(false);
 
@@ -132,7 +133,7 @@ const Footer = () => {
             </form>
             {/* COPYRIGHT DESKTOP */}
             <p className="hidden lg:block be-vietnam-pro-regular text-xs lg:text-sm text-(--DarkGrayishBlue)">
-              Copyright 2020. All Rights Reserved
+              Copyright {currentYear}. All Rights Reserved
             </p>
           </div>
         </div>
