@@ -5,6 +5,7 @@ import close from "/icons/close.svg";
 import Nav from "../UI/NavItem";
 import StartedButton from "../UI/StartedButton";
 import { handleStart } from "../utils/handleStart";
+import Logo from "../UI/Logo";
 
 const Header = () => {
   const [isMobileMenu, setIsMobileMenu] = useState(false);
@@ -55,10 +56,10 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="flex flex-row justify-between items-center max-w-7xl mx-auto px-4.5">
+    <header className="flex flex-row justify-between items-center max-w-7xl mx-auto px-2.5 lg:px-8">
       {/* LOGO */}
       <a className="w-[120px] lg:w-auto" href="/">
-        <img src={logo} alt="Manage Logo" />
+        <Logo />
       </a>
       {isMobileMenu && (
         <div className="lg:hidden fixed inset-0 bg-(--VeryDarkBlue) opacity-25 z-10"></div>
@@ -89,7 +90,7 @@ const Header = () => {
       >
         <img src={isMobileMenu ? close : burger} alt="Menu" />
       </button>
-    </div>
+    </header>
   );
 };
 

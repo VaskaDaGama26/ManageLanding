@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="wrapper py-8">
+    <main className="pt-8">
       <Router>
         <Header />
         <Routes>
@@ -13,7 +13,7 @@ function App() {
         </Routes>
         <Footer />
       </Router>
-    </div>
+    </main>
   );
 }
 

@@ -21,7 +21,7 @@ const About = () => {
     },
   ];
   return (
-    <div className="about flex flex-col gap-12 lg:gap-0 lg:flex-row justify-between items-center lg:items-start max-w-7xl mx-auto mt-24 lg:mt-24">
+    <section className="about px-0 lg:px-8 flex flex-col gap-12 lg:gap-0 lg:flex-row justify-between items-center lg:items-start max-w-7xl mx-auto">
       <div className="flex px-2 lg:ps-2 lg:pe-16 flex-col gap-2 lg:gap-6 max-w-none lg:max-w-[500px] items-center lg:items-start text-center lg:text-start">
         <Heading label="What’s different about Manage?" />
         <h3 className="be-vietnam-pro-regular text-sm leading-8 lg:text-base text-(--DarkGrayishBlue) max-w-[400px] lg:max-w-[340px]">
@@ -37,7 +37,7 @@ const About = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 

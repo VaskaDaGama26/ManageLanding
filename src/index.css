@@ -24,23 +24,24 @@ html {
   height: auto;
 }
 
-.wrapper {
-  margin: 0 auto;
-  background-image: url("/images/bg-simplify-section-desktop.svg");
-  background-position: center top;
-  background-repeat: no-repeat;
-  background-size: cover;
+section,
+footer {
+  margin-top: 8rem;
+}
+@media (max-width: 1280px) {
+  section,
+  footer {
+    margin-top: 4rem;
+  }
 }
 
 /* LIST INCREMENT */
 .about ul {
   counter-reset: item;
 }
-
 .about li {
   counter-increment: item;
 }
-
 .about li::before {
   content: counter(item, decimal-leading-zero);
 }
@@ -54,4 +55,31 @@ html {
 }
 .review__carousel::-webkit-scrollbar {
   display: none;
+}
+
+/* FOOTER */
+.footer__pattern::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: url("/images/bg-simplify-section-desktop.svg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: auto 100%;
+  filter: brightness(3);
+  z-index: 0;
+}
+@media (max-width: 1280px) {
+  .footer__pattern::before {
+    background-image: url("/images/bg-simplify-section-mobile.svg");
+    background-position: left;
+  }
+}
+
+/* FOOTER SOCIAL ICONS :HOVER */
+footer a svg path {
+  transition-duration: 300ms;
+}
+footer a:hover svg path {
+  fill: var(--BrightRed);
 }

@@ -3,6 +3,7 @@ import Heading from "../UI/Heading";
 import StartedButton from "../UI/StartedButton";
 import { handleStart } from "../utils/handleStart";
 import { goToSlide, handleReviewScroll } from "../utils/handleScroll";
+import ReviewCard from "../UI/ReviewCard";
 
 const Reviews = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,30 +46,18 @@ const Reviews = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center mt-40 gap-8 lg:gap-16">
+    <section className="flex flex-col items-center gap-8 lg:gap-16">
       <Heading label="What they’ve said" />
 
       <div ref={carouselRef} className="review__carousel">
         <div className="flex gap-6 mx-4">
           {reviewItems.map((review, index) => (
-            <div
+            <ReviewCard
               key={index}
-              className="shrink-0 pt-12 w-full max-w-[800px] lg:w-[40%] snap-center relative"
-            >
-              <div className="relative flex flex-col gap-4 items-center w-full h-full bg-(--VeryLightGray) pt-12 pb-8 px-6">
-                <img
-                  className="h-18 absolute -top-7 left-1/2 -translate-x-1/2"
-                  src={review.img}
-                  alt={review.name}
-                />
-                <h5 className="be-vietnam-pro-bold text-(--DarkBlue) pt-4">
-                  {review.name}
-                </h5>
-                <p className="be-vietnam-pro-regular text-(--DarkGrayishBlue) leading-7 text-center">
-                  {review.text}
-                </p>
-              </div>
-            </div>
+              img={review.img}
+              name={review.name}
+              text={review.text}
+            />
           ))}
         </div>
       </div>
@@ -90,7 +79,7 @@ const Reviews = () => {
         scheme="primary"
         classes="mt-4 lg:mt-8"
       />
-    </div>
+    </section>
   );
 };
 
